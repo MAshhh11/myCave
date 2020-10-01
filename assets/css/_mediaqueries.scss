@@ -1,0 +1,79 @@
+$breakpoint-smartphones: 300px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-lg-desktop: 1200px;
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $breakpoint-smartphones) { 
+    body {
+        background-size: 215%; 
+        background-position:50% 0%; 
+        background: fixed center no-repeat cover;
+    }
+    #card{
+        width: 80%;
+    }
+    #results{
+        flex-direction: column;
+    }
+    .stars {
+        width: 40%;
+    }
+    
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $breakpoint-tablet) { 
+    body {
+        background-size: 140%; 
+        background-position:50% 50%; 
+        width: 100%;
+        background: fixed center no-repeat cover;
+    }
+    #card{
+        width: 40%;
+    }
+    #results{
+        flex-direction: row;
+    }
+    .stars {
+        width: 40%;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $breakpoint-desktop) {
+    body {
+        background-size: 135%; 
+        background-position: 0% 50%; 
+        width: 100%;
+        background: fixed center no-repeat cover;
+    }
+    #card{
+       width: 30%;
+   }
+   #results{
+    flex-direction: row;
+    }
+    .stars {
+        width: 20%;
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $breakpoint-lg-desktop) { 
+    body {
+        background-size: 100%; 
+        background-position: 0% 50%; 
+        background: fixed center no-repeat cover;
+    }
+    #card{
+        width: 30%;
+    }
+    #results{
+        flex-direction: row;
+    }
+    .stars {
+        width: 20%;
+    }
+}
