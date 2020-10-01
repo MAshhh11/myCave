@@ -6,7 +6,7 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if (isset($_SESSION['id'])){
+
     
     if(isset($_GET['id'])){
     
@@ -50,5 +50,5 @@ if (isset($_SESSION['id'])){
 <?php 
 
 include 'assets/php/footer.php'; 
-}
+
 ?>
