@@ -6,14 +6,14 @@ include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
 
-if(isset($_SESSION['id'])){   
-    if(isset($_GET['id'])) {
+if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
+    if(isset($_GET['id'])) { 
 
-        $id = $_GET['id'];
+        $id = $_GET['id']; // RECUPERE L'ID
         $sql = $db->query("SELECT * FROM wine WHERE id=$id");
         $sql->setFetchMode(PDO::FETCH_ASSOC);
     
-        $result = $sql->fetch();
+        $result = $sql->fetch(); // AFFICHAGE LES DONNEES DU VIN A MODIFIER
     }
 
 ?>

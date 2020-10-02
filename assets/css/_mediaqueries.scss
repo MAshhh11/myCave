@@ -19,6 +19,10 @@ $breakpoint-lg-desktop: 1200px;
     .stars {
         width: 40%;
     }
+    .imgwine {
+        width: 200;
+        height: 230;
+    }
     
  }
 
@@ -26,9 +30,9 @@ $breakpoint-lg-desktop: 1200px;
 @media (min-width: $breakpoint-tablet) { 
     body {
         background-size: 140%; 
-        background-position:50% 50%; 
+        background-position: 100% 50%; 
         width: 100%;
-        background: fixed center no-repeat cover;
+        
     }
     #card{
         width: 40%;
@@ -45,9 +49,9 @@ $breakpoint-lg-desktop: 1200px;
 @media (min-width: $breakpoint-desktop) {
     body {
         background-size: 135%; 
-        background-position: 0% 50%; 
+        background-position: 100% 50%; 
         width: 100%;
-        background: fixed center no-repeat cover;
+        
     }
     #card{
        width: 30%;
@@ -64,8 +68,8 @@ $breakpoint-lg-desktop: 1200px;
 @media (min-width: $breakpoint-lg-desktop) { 
     body {
         background-size: 100%; 
-        background-position: 0% 50%; 
-        background: fixed center no-repeat cover;
+        background-position: 100% 50%; 
+    
     }
     #card{
         width: 30%;
@@ -76,4 +80,7 @@ $breakpoint-lg-desktop: 1200px;
     .stars {
         width: 20%;
     }
+}
+section {
+    margin-bottom: 2vh;
 }

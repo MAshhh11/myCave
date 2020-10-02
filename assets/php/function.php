@@ -9,21 +9,21 @@
 
     
     function displayWine(){ 
-        
+        // AFFICHE UNE ENTREE VIN 
             if(isset($_GET['id'])){
                 global $db;
                 $wine_id = $_GET['id'];
                 $sql = $db->query("SELECT * FROM wine WHERE id = $wine_id");
                 $sql->setFetchMode(PDO::FETCH_ASSOC);
 
-                while($row = $sql->fetch()){ 
+                while($row = $sql->fetch()){ //BOUCLE D'AFFICHAGE DES DONNEES
                 ?>
                 <div class="cartouche">
                        
                         <div id="card2">
                             <h2><?= $row['name']; ?></h2>
                             <?php
-                                rateYourWine();
+                                rateYourWine(); // APPEL A LA FONCTION RATE
                             ?>
                             <p><?= $row['grapes']; ?></p>
                             <p><?= $row['wine_year']; ?></p>
@@ -33,7 +33,8 @@
                             <p class="description"><?= $row['description']; ?></p>
                             <a class="button3" href="winelist.php">RETURN</a>
                             <?php 
-                            if(isset($_SESSION['id'])){ ?>
+                            if(isset($_SESSION['id'])){
+                                //BOUTONS MODIFY DELETE LES USERS  ?>
                                 <div class="button2">
                                     <a class="button3" href="modifywine.php?id=<?= $row['id']; ?>">MODIFY</a>
                                     <a class="confirm button3" href="deletewine.php?id=<?= $row['id']; ?>">DELETE</a>
@@ -96,6 +97,7 @@
         if(isset($_GET['id'])){
             global $db;
             $wine_id = $_GET['id'];
+            // RECUPERATION DES DONNEES : NOTES ET COMMENTAIRES D'UN VIN
             $sql = $db->query("SELECT * FROM wine AS w LEFT JOIN rate AS r on w.id=r.id_wine WHERE w.id=$wine_id");
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             $row = $sql->fetch();

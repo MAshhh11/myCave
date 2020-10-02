@@ -236,7 +236,7 @@ textarea::placeholder {
 
 .button2 {
   margin-top: 2vh;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
   display: inline-block;
 }
 
@@ -347,13 +347,17 @@ textarea::placeholder {
   .stars {
     width: 40%;
   }
+
+  .imgwine {
+    width: 200;
+    height: 230;
+  }
 }
 @media (min-width: 768px) {
   body {
     background-size: 140%;
-    background-position: 50% 50%;
+    background-position: 100% 50%;
     width: 100%;
-    background: fixed center no-repeat cover;
   }
 
   #card {
@@ -371,9 +375,8 @@ textarea::placeholder {
 @media (min-width: 992px) {
   body {
     background-size: 135%;
-    background-position: 0% 50%;
+    background-position: 100% 50%;
     width: 100%;
-    background: fixed center no-repeat cover;
   }
 
   #card {
@@ -391,8 +394,7 @@ textarea::placeholder {
 @media (min-width: 1200px) {
   body {
     background-size: 100%;
-    background-position: 0% 50%;
-    background: fixed center no-repeat cover;
+    background-position: 100% 50%;
   }
 
   #card {
@@ -407,6 +409,10 @@ textarea::placeholder {
     width: 20%;
   }
 }
+section {
+  margin-bottom: 2vh;
+}
+
 #navbar {
   width: 90%;
   padding: 5px;
@@ -455,7 +461,7 @@ footer {
   text-align: center;
   font-family: "SourceSansPro-Regular";
   position: absolute;
-  bottom: 0;
+  bottom: -10vh;
   width: 100%;
   background-color: #3e0018;
   height: auto;

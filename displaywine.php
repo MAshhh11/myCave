@@ -12,7 +12,7 @@ include 'assets/php/nav.php';
     <article id="cartouche">
         <div id="text-welcome">
                 <?php
-                    displayWine();
+                    displayWine();//FONCTION QUI AFFICHE LES VINS
                 ?>
         </div>
     </article>

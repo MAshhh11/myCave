@@ -10,7 +10,7 @@
 });
 
 
-// CONFIRM 
+// CONFIRM : FONCTION CLICK MODAL AUTOGENERE 
 $(function() {
   $('.confirm').click(function(e) {
       e.preventDefault();
@@ -39,3 +39,4 @@ anime.timeline({loop: true})
     delay: 8000
   });
 
+ 

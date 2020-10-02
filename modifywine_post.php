@@ -5,11 +5,11 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if(isset($_SESSION['id'])){
+if(isset($_SESSION['id'])){ // VISIBLE SEULEMENT DES USERS
     
 if(isset($_GET['id'])){
     
-    $id = $_GET['id'];
+    $id = $_GET['id']; // RECUPERE L'ID'
     if(!empty($_POST['name']) && !empty($_POST['grapes']) && !empty($_POST['year']) && !empty($_POST['country']) && !empty($_POST['region']) && !empty($_POST['description'])){
         $file = $_FILES['picture'];
         $name = htmlspecialchars($_POST['name']);

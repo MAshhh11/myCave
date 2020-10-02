@@ -5,15 +5,15 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if(isset($_SESSION['id'])){    
+if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
         
-    
 ?>
 <section>
     <article id="cartouche">
         <div id="text-welcome">
             <h2 class="ml3">ADD WINE</h2>
             <p>Please fill in all fields:</p>
+            <!-- FORMULAIRE -->
             <form action="add_wine_post.php" method="post" enctype="multipart/form-data">
                 <div>
                     <input type="text" name="name" placeholder="NAME" >

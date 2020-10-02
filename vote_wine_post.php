@@ -6,13 +6,13 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if (isset($_SESSION['id'])){
-    $id_user = $_SESSION['id'];
+if (isset($_SESSION['id'])){ // VISIBLE SEULEMENT DES USERS
+    $id_user = $_SESSION['id']; // RECUPERE L'ID
 
     if(isset($_GET['id'])){
-        $id_wine = $_GET['id'];
+        $id_wine = $_GET['id']; // RECUPERE L'ID DE L'URL
     
-        if(!empty($_POST['fullname']) && !empty($_POST['vote']) && !empty($_POST['comment'])){
+        if(!empty($_POST['fullname']) && !empty($_POST['vote']) && !empty($_POST['comment'])){ // RECUPERE LES DONNEES DU FORMULAIRE
                         
             $user_fullname = htmlspecialchars($_POST['fullname']);
             $rate = $_POST['vote'];
@@ -25,7 +25,7 @@ if (isset($_SESSION['id'])){
                 $sth->bindValue(':id_user',$id_user);
                 $sth->bindValue(':id_wine',$id_wine);
                 if($sth->execute()){
-
+                        //SI LA PREMIERE REQUETE S'EXECUTE ON VA MODIFIER LA TABLE WINE POUR AUGMENTER LE COMPTEUR DE VOTE 
 
                     $sql = $db->query("SELECT * FROM wine WHERE id=$id_wine");
                     $sql->setFetchMode(PDO::FETCH_ASSOC);
@@ -38,7 +38,7 @@ if (isset($_SESSION['id'])){
                     $sth2->bindValue(':id',$id_wine);
                     $sth2->execute();
 
-                    header('Location:winelist.php');
+                    header('Location:winelist.php'); //REDIRECTION
 
                 }else{
                     echo '<div class="danger">Something went wrong!</div>';

@@ -6,10 +6,11 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if(isset($_SESSION['id'])){
-    if(isset($_GET['id'])) {
+if(isset($_SESSION['id'])){ // ACCES SEULEMENT AUX USERS
+    if(isset($_GET['id'])) { // SI L'ID EST RECUPEREE
 
         $id = $_GET['id'];
+        // RECUPERATION DES DONNÉES D'UN VIN EN PARTICULIER
         $sql = $db->query("SELECT * FROM wine WHERE id=$id");
         $sql->setFetchMode(PDO::FETCH_ASSOC);
     
@@ -22,6 +23,7 @@ if(isset($_SESSION['id'])){
             <div id="text-welcome">
                 <h2 class="ml3">RATE YOUR FAVORITE WINE</h2>
                 <p>On a scale of 1 to 5, please rate this wine:</p>
+        <!-- FORMULAIRE -->
                 <form class="center" action="vote_wine_post.php?id=<?= $result['id'] ?>" method="post" enctype="multipart/form-data">
                 <div class="center">
                 

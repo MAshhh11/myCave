@@ -6,12 +6,13 @@ include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
 if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
+    // SEULEMENT VISIBLE DES ADMINISTRATEURS
 
 if (isset($_POST['submit-signup'])){
     $user_email = htmlspecialchars($_POST['user_email_signup']);
     $user_pass = htmlspecialchars($_POST['user_password_signup']);
     $user_pass2 = htmlspecialchars($_POST['user_password_2_signup']);
-    if($sql = $db->query("SELECT * FROM user WHERE email = '$user_email'")){
+    if($sql = $db->query("SELECT * FROM user WHERE email = '$user_email'")){ // VERIFICATION DE L'EMAIL EXISTANT OU NON
         $compteur = $sql->rowCount();
         if($compteur != 0){
             $message = "<div class ='danger'> Il y a déja un compte possédant cet e-mail </div>";

@@ -5,7 +5,7 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if(isset($_POST['submit-login'])){
+if(isset($_POST['submit-login'])){ // VERIFICATION D'IDENTIFIANTS
     $user_email = htmlspecialchars($_POST['user_email']);
     $user_pass = htmlspecialchars($_POST['user_password']);
    $sql= $db->query("SELECT * FROM user WHERE email ='$user_email'");
@@ -36,6 +36,7 @@ if(isset($_POST['submit-login'])){
         <div id="text-welcome">
             <h1 class="ml3">WELCOME TO MYCAVE</h1>
             <p>If you are a member of the staff, please login to myCave:</p>
+        <!-- FORMULAIRE -->
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div>
                     <input type="text" name="user_email" placeholder="EMAIL">

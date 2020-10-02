@@ -6,13 +6,14 @@ include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
 if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
+     // VISIBLE SEULEMENT DES ADMINISTRATEURS
     
     if(isset($_GET['id'])){
     
-    $id = $_GET['id'];
+    $id = $_GET['id']; // RECUPERE L'ID'
     $sql = $db->query("SELECT * FROM user WHERE id = $id");
     $sql->setFetchMode(PDO::FETCH_ASSOC);
-    $row = $sql->fetch();
+    $row = $sql->fetch(); // AFFICHAGE DES DONNEES DE L'USER
 
 ?>
 
@@ -21,6 +22,7 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
     <div id="text-welcome">
         <h2>MODIFY PROFILE</h2>
         <p>You can modify informations:</p>
+        <!-- FORMULAIRE -->
         <form action="modifyuser_post.php?id=<?= $row['id'] ?>" method="post">
             <div>
                 <input type="text" name="firstname" placeholder="FIRSTNAME" value="<?= $row['firstname'];?>">

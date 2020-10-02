@@ -6,7 +6,7 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
           
-if(!empty($_POST['name']) && !empty($_POST['grapes']) && !empty($_POST['year']) && !empty($_POST['country']) && !empty($_POST['region']) && !empty($_POST['description'])){
+if(!empty($_POST['name']) && !empty($_POST['grapes']) && !empty($_POST['year']) && !empty($_POST['country']) && !empty($_POST['region']) && !empty($_POST['description'])){ // RECUPERE LES DONNEES DU FORMULAIRE
                 
     $file = $_FILES['picture'];
     $name = htmlspecialchars($_POST['name']);

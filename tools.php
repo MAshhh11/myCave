@@ -17,14 +17,14 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
             <div class="flex" id="results">
 
             <?php
-                displayAllUsers();
+                displayAllUsers(); //FONCTION QUI AFFICHE LES USERS
             ?>
             </div>
          <h3>WINE LIST</h3>
          <p>You can decide whether to update wines descriptions or to remove wines from database:</p>
             <div class="flex" id="results">
             <?php
-                displayAllWineTools();
+                displayAllWineTools(); //FONCTION QUI AFFICHE LES VINS
             ?>
             </div>
             <div class="button2">

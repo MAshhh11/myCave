@@ -8,11 +8,12 @@ include 'assets/php/nav.php';
 
 
     
-    if(isset($_GET['id'])){
+    if(isset($_GET['id'])){ // SI L'ID EST RECUPEREE
     
     $id = $_GET['id'];
     $sql = $db->query("SELECT * FROM rate AS r RIGHT JOIN wine AS w on w.id=r.id_wine WHERE w.id=$id");
     $sql->setFetchMode(PDO::FETCH_ASSOC);
+    // AFFICHAGE DES NOTE DU VIN EN PARTICULIER
     }
 ?>
 

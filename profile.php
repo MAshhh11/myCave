@@ -21,7 +21,7 @@ include 'assets/php/nav.php';
         $id = $_SESSION['id'];
         
 
-        $sth = $db->prepare("UPDATE user SET lastname=?, firstname=?, email=? WHERE id=?");
+        $sth = $db->prepare("UPDATE user SET lastname=?, firstname=?, email=? WHERE id=?"); // MET A JOUR LE PROFIL USER
 
         $sth->bindValue(1, $nom);
         $sth->bindValue(2, $prenom);
@@ -45,6 +45,7 @@ include 'assets/php/nav.php';
             <h2 class="ml3">Welcome to MyCave!</h2>
             <h3>YOUR PROFILE</h3>
             <p>Please check your informations below:</p>
+            <!-- FORMULAIRE -->
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                 <div>
                     <input type="text" name="firstname" placeholder="FIRSTNAME" value="<?= $row['firstname'];?>">
@@ -67,15 +68,16 @@ include 'assets/php/nav.php';
             </div>
             <div id="card">
                 <?php
-                if (isset($_SESSION['id']) && $_SESSION['id'] == 3){ ?>
-                <div class="button">
+                if (isset($_SESSION['id']) && $_SESSION['id'] == 3){ 
+                    // SELON SI L'USER EST ADMIN OU PAS AFFICHAGE D'UNE CARTE AVEC DES BOUTONS ?>
+                <div class="button"> 
                     <p>Your admin privileges permit the following actions:</p>
                     <a href="tools.php" class="button3">ADMIN TOOLS</a>
                     <a href="register.php" class="button3">ADD USER</a>
                 </div>
                 <?php
                 }else{ ?>
-                    <p>For any request contact an admin at admin@mycave.com.</p>
+                    <p class="mb-5">For any request contact an admin at admin@mycave.com</p>
         <?php  }
                 ?>
             </div>
