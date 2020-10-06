@@ -25,12 +25,18 @@
                             <?php
                                 rateYourWine(); // APPEL A LA FONCTION RATE
                             ?>
-                            <p><?= $row['grapes']; ?></p>
-                            <p><?= $row['wine_year']; ?></p>
-                            <img class="imgwine" src="<?=$row['picture'];?>" alt="image_annonce" width="250" height="300">
-                            <p><?= $row['country']; ?></p>
-                            <p><?= $row['region']; ?></p>
-                            <p class="description"><?= $row['description']; ?></p>
+                            <div class="flex2">
+                                <div class="item">
+                                    <img class="imgwine" src="<?=$row['picture'];?>" alt="image_annonce" width="250" height="300">
+                                    <p><?= $row['wine_year']; ?></p>
+                                </div>
+                                <div class="item">
+                                    <p><?= $row['grapes']; ?></p>
+                                    <p  class="description2"><?= $row['country']; ?></p>
+                                    <p class="description2"><?= $row['region']; ?></p>
+                                    <p class="description2"><?= $row['description']; ?></p>
+                                </div>
+                            </div>
                             <a class="button3" href="winelist.php">RETURN</a>
                             <?php 
                             if(isset($_SESSION['id'])){
@@ -68,6 +74,29 @@
             echo "<div class ='danger'>You need privilege user admin</div>";
             
         }
+    }
+    
+    function displayAllComments(){
+        //fonction admin pour afficher tous les commentaires
+        if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
+            global $db;
+            $sql = $db->query("SELECT * FROM rate");
+            $sql->setFetchMode(PDO::FETCH_ASSOC);
+    
+            while($row = $sql->fetch()){ 
+            ?>
+               <div id="card">
+                    <p><?= $row['user_fullname']; ?> said:</p>
+                    <p>"<?= $row['comment']; ?>"</p>
+                    <a class="confirm button3" href="deletecomment.php?id=<?= $row['id_rate']; ?>"> DELETE</a>
+                </div>
+            <?php
+            }
+            } else {
+                echo "<div class ='danger'>You need privilege user admin</div>";
+                
+            }
+
     }
 
     function displayAllWineTools(){ //fonction admin pour afficher tous les vins

@@ -11,6 +11,7 @@ include 'assets/php/nav.php';
 <section>
     <article id="cartouche">
         <div id="text-welcome">
+            <h2 class="ml3">Welcome to MyCave!</h2>
                 <?php
                     displayWine();//FONCTION QUI AFFICHE LES VINS
                 ?>

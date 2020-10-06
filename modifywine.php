@@ -51,7 +51,7 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
         </div> 
     </form>
     <div class="button">
-    <a href="winelist.php" class="button3">RETURN</a>
+    <a href="displaywine.php?id=<?= $id ?>" class="button3">RETURN</a>
     </div>
 </div>
 </article>

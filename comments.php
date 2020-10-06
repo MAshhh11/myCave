@@ -20,12 +20,14 @@ include 'assets/php/nav.php';
 <section>
     <article id="cartouche">
         <div id="text-welcome">
-            <h3>What people think of this wine: </h3>
-            
+            <h3 class="ml3">What people think of this wine: </h3>
+        
             <?php while($row = $sql->fetch()){ ?>
                 <div id="card" class="flex">
                     <p><?= $row['user_fullname']; ?>: "<?= $row['comment']; ?>" RATE GIVEN: <?= $row['rate']; ?>
-                <?php //AFFICHAGE DES ETOILES SELON LA NOTE
+
+                <?php                 
+                //AFFICHAGE DES ETOILES SELON LA NOTE
                     if($row['rate'] >= 1 && $row['rate'] < 2){ ?>
                          <img src="assets/img/star1.png" alt="star1" class="ministars" width="90" height="20">
             <?php }if($row['rate'] >= 2 && $row['rate'] < 3){ ?>
@@ -37,11 +39,20 @@ include 'assets/php/nav.php';
             <?php }if($row['rate'] >= 5  && $row['rate'] < 6){ ?>
                         <img src="assets/img/star5.png" alt="star5" class="ministars" width="90" height="20">
              <?php } ?></p>
+                
+                <?php
+
+                if (isset($_SESSION['id']) && $_SESSION['id'] == 3){ ?>
+                    <div class="button2">
+                    <a class="confirm button3" href="deletecomment.php?id=<?= $row['id_rate']; ?>"> DELETE</a>
+                    </div>
+                    <?php
+                } ?>
                 </div>
 
-             <?php }?>
+    <?php  }?>
              <div class="button2">
-                <a href="winelist.php" class="button3">RETURN</a>
+                <a href="displaywine.php?id=<?= $id ?>" class="button3">RETURN</a>
             </div>
 
         </div>

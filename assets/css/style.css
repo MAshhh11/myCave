@@ -149,7 +149,7 @@ textarea::placeholder {
   width: 80%;
   height: auto;
   margin: 10px auto;
-  background-color: rgba(136, 92, 126, 0.9);
+  background-color: #885c7e;
   font-family: "SourceSansPro-Regular", sans-serif;
   text-align: center;
   padding: 10px;
@@ -160,7 +160,7 @@ textarea::placeholder {
   width: 90%;
   height: auto;
   margin: 10px auto;
-  background-color: rgba(136, 92, 126, 0.9);
+  background-color: #885c7e;
   font-family: "SourceSansPro-Regular", sans-serif;
   text-align: center;
   padding: 10px;
@@ -201,7 +201,7 @@ textarea::placeholder {
 }
 
 .success {
-  background-color: rgba(136, 92, 126, 0.9);
+  background-color: #885c7e;
   text-align: center;
   font-family: "SourceSansPro-Regular", sans-serif;
   height: 30px;
@@ -329,6 +329,28 @@ textarea::placeholder {
   text-decoration: underline;
 }
 
+.flex2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh;
+  flex-grow: 1;
+}
+
+.description2 {
+  padding-right: 20%;
+  padding-left: 20%;
+}
+
+.item {
+  flex-grow: 1;
+  width: 50%;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
 @media (min-width: 300px) {
   body {
     background-size: 215%;
@@ -352,6 +374,14 @@ textarea::placeholder {
     width: 200;
     height: 230;
   }
+
+  .flex2 {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100% !important;
+  }
 }
 @media (min-width: 768px) {
   body {
@@ -370,6 +400,14 @@ textarea::placeholder {
 
   .stars {
     width: 40%;
+  }
+
+  .flex2 {
+    flex-direction: row;
+  }
+
+  .item {
+    width: 50% !important;
   }
 }
 @media (min-width: 992px) {
@@ -390,6 +428,14 @@ textarea::placeholder {
   .stars {
     width: 20%;
   }
+
+  .flex2 {
+    flex-direction: row;
+  }
+
+  .item {
+    width: 50% !important;
+  }
 }
 @media (min-width: 1200px) {
   body {
@@ -408,20 +454,27 @@ textarea::placeholder {
   .stars {
     width: 20%;
   }
-}
-section {
-  margin-bottom: 2vh;
-}
 
+  .flex2 {
+    flex-direction: row;
+  }
+
+  section {
+    margin-bottom: 2vh;
+  }
+
+  .item {
+    width: 50% !important;
+  }
+}
 #navbar {
   width: 90%;
   padding: 5px;
   margin: 20px;
 }
 #navbar #navbar-ul {
-  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 #navbar #navbar-ul > li {
@@ -432,9 +485,11 @@ section {
   text-decoration: none;
   font-size: 1em;
   color: white;
+  padding-right: 2vw;
 }
 #navbar #navbar-ul > li > a > img {
   height: 30px;
+  padding-right: 2vw;
 }
 #navbar #navbar-ul > li > a:hover {
   color: white;

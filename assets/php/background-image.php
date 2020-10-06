@@ -17,6 +17,10 @@ if($page == 'index.php'){
     
 } elseif($page == 'displaywine.php') {
     echo '<body style="background-image: url(assets/img/displaywine.jpg);">'; 
+    
+} elseif($page == 'deletecomment.php') {
+    echo '<body style="background-image: url(assets/img/displaywine.jpg);">'; 
+    
 } elseif($page == 'add_wine.php') {
     echo '<body style="background-image: url(assets/img/addwine.jpg);">';
 

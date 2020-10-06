@@ -4,9 +4,8 @@
     margin: 20px;
 
     #navbar-ul{
-        padding: 0;
-        display:flex;
-        justify-content: space-between;
+        display: flex;
+        justify-content: flex-end;
         align-items: center;
 
         &>li {
@@ -18,10 +17,13 @@
             text-decoration: none;
             font-size: 1em;
             color: white;
+            padding-right: 2vw;
         }
 
         &>li>a>img {
             height: 30px;
+            padding-right: 2vw;
+            
         }
         &>li>a:hover{
             

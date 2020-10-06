@@ -6,7 +6,7 @@ include 'assets/php/background-image.php';
 include 'assets/php/header.php';
 include 'assets/php/nav.php';
 
-if (isset($_SESSION['id'])){ // VISIBLE SEULEMENT DES USERS
+if (isset($_SESSION['id']) && $_SESSION['id'] == 3){ // VISIBLE SEULEMENT DES ADMINS
    
         if(isset($_GET['id'])){
             $id = $_GET['id']; // RECUPERE L'ID

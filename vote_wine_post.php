@@ -38,7 +38,8 @@ if (isset($_SESSION['id'])){ // VISIBLE SEULEMENT DES USERS
                     $sth2->bindValue(':id',$id_wine);
                     $sth2->execute();
 
-                    header('Location:winelist.php'); //REDIRECTION
+                    header('Location: displaywine.php?id='.$id_wine);
+                    exit(); //REDIRECTION
 
                 }else{
                     echo '<div class="danger">Something went wrong!</div>';

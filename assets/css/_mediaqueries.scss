@@ -23,6 +23,12 @@ $breakpoint-lg-desktop: 1200px;
         width: 200;
         height: 230;
     }
+    .flex2 {
+        flex-direction: column;
+    }
+    .item {
+        width: 100% !important;
+    }
     
  }
 
@@ -43,6 +49,13 @@ $breakpoint-lg-desktop: 1200px;
     .stars {
         width: 40%;
     }
+    .flex2 {
+        flex-direction: row;
+    }
+    .item {
+        width: 50% !important;
+    }
+    
 }
 
 // Large devices (desktops, 992px and up)
@@ -62,6 +75,12 @@ $breakpoint-lg-desktop: 1200px;
     .stars {
         width: 20%;
     }
+    .flex2 {
+        flex-direction: row;
+    }
+    .item {
+        width: 50% !important;
+    }
  }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -80,7 +99,13 @@ $breakpoint-lg-desktop: 1200px;
     .stars {
         width: 20%;
     }
-}
-section {
-    margin-bottom: 2vh;
+    .flex2 {
+        flex-direction: row;
+    }
+    section {
+        margin-bottom: 2vh;
+    }
+    .item {
+        width: 50% !important;
+    }
 }

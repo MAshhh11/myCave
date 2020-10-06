@@ -12,7 +12,13 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
     <article id="cartouche">
         <div id="text-welcome">
         <h2 class="ml3">WELCOME TO THE ADMIN PANEL!</h2>
-        <h3>USER LIST</h3>
+        <nav>
+            <ul>
+                <li><a href="#userlist">USER LIST</a></li>
+                <li><a href="#moderate">MODERATE COMMENTS</a></li>
+                <li><a href="#winelist">WINE LIST</a></li>
+
+        <h3 id="userlist">USER LIST</h3>
         <p>You can decide whether to update users profile or to remove users from database:</p>
             <div class="flex" id="results">
 
@@ -20,7 +26,14 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
                 displayAllUsers(); //FONCTION QUI AFFICHE LES USERS
             ?>
             </div>
-         <h3>WINE LIST</h3>
+        <h3 id="moderate">MODERATE COMMENTS</h3>
+        <p>You can moderate user comments:</p>
+            <div class="flex" id="results">
+            <?php
+                displayAllComments(); //FONCTION QUI AFFICHE LES COMMENTAIRES
+            ?>
+            </div>
+         <h3 id="winelist">WINE LIST</h3>
          <p>You can decide whether to update wines descriptions or to remove wines from database:</p>
             <div class="flex" id="results">
             <?php
