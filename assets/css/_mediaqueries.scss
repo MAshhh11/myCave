@@ -29,6 +29,15 @@ $breakpoint-lg-desktop: 1200px;
     .item {
         width: 100% !important;
     }
+    .flex3 {
+        display: block;
+    }
+    .litools {
+        display: none;
+    }
+    #card2 {
+        height: auto;
+    }
     
  }
 
@@ -54,6 +63,15 @@ $breakpoint-lg-desktop: 1200px;
     }
     .item {
         width: 50% !important;
+    }
+    .flex3 {
+        display: flex;
+    }
+    .litools {
+        display: inline;
+    }
+    #card2 {
+        height: 90%;
     }
     
 }
@@ -81,6 +99,15 @@ $breakpoint-lg-desktop: 1200px;
     .item {
         width: 50% !important;
     }
+    .flex3 {
+        display: flex;
+    }
+    .litools {
+        display: inline;
+    }
+    #card2 {
+        height: 90%;
+    }
  }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -107,5 +134,14 @@ $breakpoint-lg-desktop: 1200px;
     }
     .item {
         width: 50% !important;
+    }
+    .flex3 {
+        display: flex;
+    }
+    .litools {
+        display: inline;
+    }
+    #card2 {
+        height: auto;
     }
 }

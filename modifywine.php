@@ -22,7 +22,10 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
 <article id="cartouche">
 <div id="text-welcome">
     <h2 class="ml3">MODIFY WINE</h2>
+    <p>Please, modify the information provided:</p>
     <form action="modifywine_post.php?id=<?= $result['id'] ?>" method="post" enctype="multipart/form-data">
+    <div class="flex3">
+    <div>
         <div>
             <input type="text" name="name" value="<?= $result['name'] ?>" >
         </div>
@@ -32,6 +35,8 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
         <div>
             <input type="text" name="year" value="<?= $result['wine_year'] ?>" >
         </div>
+    </div>
+    <div>
         <div>
             <input type="text" name="country" value="<?= $result['country'] ?>" >
         </div>
@@ -39,16 +44,18 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
             <input type="text" name="region" value="<?= $result['region'] ?>" >
         </div>
         <div>
-            <input type="text" name="description" value="<?= $result['description'] ?>" >
+            <input type="text" name="description" value="<?= $result['description'] ?>">
         </div>
+        </div> 
+    </div>
         <div>
             <label for="file" class="label-file">ADD PICTURE
             <input id="file" class="input-file" type="file" name="picture">
             </label>
         </div> 
-        <div class="button">
+        <div class="button2">
             <input type="submit" name="submit-wine" class="btn2" value="UPDATE WINE">
-        </div> 
+        </div>
     </form>
     <div class="button">
     <a href="displaywine.php?id=<?= $id ?>" class="button3">RETURN</a>

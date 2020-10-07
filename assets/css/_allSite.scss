@@ -146,6 +146,7 @@ textarea {
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    cursor: pointer;
 }
 
 #card {
@@ -160,13 +161,12 @@ textarea {
 }
 #card2 {
     width: 90%;
-    height: auto;
+    height: 90%;
     margin: 10px auto;
-    background-color: $color-3;
+    background-image: url(../img/landscape.jpg);
     font-family: "SourceSansPro-Regular", sans-serif;
     text-align:center;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px;    
 }
 
 #cartouche {
@@ -199,6 +199,7 @@ textarea {
 .btn2:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 
 }
 .success {
@@ -229,10 +230,9 @@ textarea {
 }
 
 .button {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
     display: inline-block;
 }
+
 .button2 {
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -246,8 +246,8 @@ textarea {
 $color:#88002D;
 
 .button3 {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     display: inline-block;
     padding: .75rem 1.25rem;
     border-radius: 10rem;
@@ -284,6 +284,7 @@ $color:#88002D;
     }
     &:hover {
         color: #fff;
+        cursor: pointer;
         &:before {
             width: 100%;
         }
@@ -344,4 +345,12 @@ $color:#88002D;
 }
 nav ul li {
     list-style-type: none;
+}
+
+.flex3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh;
+    flex-grow: 1;
 }

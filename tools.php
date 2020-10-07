@@ -14,9 +14,14 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
         <h2 class="ml3">WELCOME TO THE ADMIN PANEL!</h2>
         <nav>
             <ul>
-                <li><a href="#userlist">USER LIST</a></li>
-                <li><a href="#moderate">MODERATE COMMENTS</a></li>
-                <li><a href="#winelist">WINE LIST</a></li>
+                <li class="litools"><a href="#userlist">USER LIST</a></li>
+                <li class="litools"><a href="#moderate">MODERATE COMMENTS</a></li>
+                <li class="litools"><a href="#winelist">WINE LIST</a></li>
+            </ul>
+
+            <div>
+                    <a href="winelist.php" class="button3">RETURN TO WINE GALLERY</a>
+            </div>
 
         <h3 id="userlist">USER LIST</h3>
         <p>You can decide whether to update users profile or to remove users from database:</p>

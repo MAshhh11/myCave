@@ -15,24 +15,30 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
             <p>Please fill in all fields:</p>
             <!-- FORMULAIRE -->
             <form action="add_wine_post.php" method="post" enctype="multipart/form-data">
-                <div>
-                    <input type="text" name="name" placeholder="NAME" >
-                </div>
-                <div>
-                    <input type="text" name="grapes" placeholder="GRAPES" >
-                </div>
-                <div>
-                    <input type="text" name="year" placeholder="YEAR" >
-                </div>
-                <div>
-                    <input type="text" name="country" placeholder="COUNTRY" >
-                </div>
-                <div>
-                    <input type="text" name="region" placeholder="REGION" >
-                </div>
-                <div>
-                    <input type="text" name="description" placeholder="DESCRIPTION" >
-                </div>
+            <div class="flex3">
+    <div>
+        <div>
+            <input type="text" name="name" placeholder="NAME" >
+        </div>
+        <div>
+            <input type="text" name="grapes" placeholder="GRAPE" >
+        </div>
+        <div>
+            <input type="text" name="year" placeholder="YEAR" >
+        </div>
+    </div>
+    <div>
+        <div>
+            <input type="text" name="country" placeholder="COUNTRY" >
+        </div>
+        <div>
+            <input type="text" name="region" placeholder="REGION" >
+        </div>
+        <div>
+            <input type="text" name="description" placeholder="DESCRIPTION">
+        </div>
+        </div> 
+    </div>
                 <div>
                     <label for="file" class="label-file">ADD PICTURE
                     <input id="file" class="input-file" type="file" name="picture">
