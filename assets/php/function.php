@@ -31,6 +31,7 @@
                                     <p><?= $row['wine_year']; ?></p>
                                 </div>
                                 <div class="item">
+                                    <p><i class="fas fa-wine-glass-alt fa-2x"></i></p>
                                     <p><?= $row['grapes']; ?></p>
                                     <p  class="description2"><?= $row['country']; ?></p>
                                     <p class="description2"><?= $row['region']; ?></p>
@@ -62,9 +63,9 @@
         while($row = $sql->fetch()){ 
         ?>
            <div id="card">
-                <p><?= $row['firstname']; ?></p>
-                <p><?= $row['lastname']; ?></p>
-                <p><?= $row['email']; ?></p>
+            <p><i class="far fa-address-card fa-2x"></i></p>
+                <p><?= $row['firstname']; ?>  <?= $row['lastname']; ?></p>
+                <p><i class="fas fa-at"></i>  <?= $row['email']; ?></p>
                 <a class="button3" href="modifyuser.php?id=<?= $row['id']; ?>"> MODIFY</a>
                 <a class="confirm button3" href="deleteuser.php?id=<?= $row['id']; ?>"> DELETE</a>
             </div>
@@ -86,7 +87,8 @@
             while($row = $sql->fetch()){ 
             ?>
                <div id="card">
-                    <p><?= $row['user_fullname']; ?> said:</p>
+                    <p><i class="far fa-comment fa-2x"></i></p>
+                    <p><?= $row['user_fullname']; ?></p>
                     <p>"<?= $row['comment']; ?>"</p>
                     <a class="confirm button3" href="deletecomment.php?id=<?= $row['id_rate']; ?>"> DELETE</a>
                 </div>
@@ -108,6 +110,7 @@
         while($row = $sql->fetch()){ 
         ?>
            <div id="card">
+                <p><i class="fas fa-wine-glass-alt fa-2x"></i></p>
                 <p><?= $row['name']; ?></p>
                 <p><?= $row['grapes']; ?></p>
                 <p><?= $row['wine_year']; ?></p>
@@ -154,7 +157,7 @@
                     <?php }if($average_rate >= 5  && $average_rate < 6){ ?>
                         <img src="assets/img/star5.png" alt="star5" class="stars" width="40">
                     <?php } ?>
-                    <a href="comments.php?id=<?= $row['id']; ?>">See comments</a>   
+                    <a href="comments.php?id=<?= $row['id']; ?>">See comments  <i class="far fa-comment"></i></a>   
 <?php } else{ ?>
                 <img src="assets/img/star0.png" alt="star0" class="stars" width="40">
                  

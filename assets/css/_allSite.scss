@@ -158,6 +158,10 @@ textarea {
     text-align:center;
     padding: 10px;
     border-radius: 10px;
+    background-image: url(../img/card.png), ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+      
 }
 #card2 {
     width: 90%;
@@ -166,7 +170,8 @@ textarea {
     background-image: url(../img/landscape.jpg);
     font-family: "SourceSansPro-Regular", sans-serif;
     text-align:center;
-    padding: 10px;    
+    padding: 10px;
+    background-position: 50% 30%;    
 }
 
 #cartouche {
@@ -333,6 +338,7 @@ $color:#88002D;
     align-items: center;
     padding: 2vh;
     flex-grow: 1;
+    
 }
 .description2 {
     padding-right: 20%;
@@ -342,6 +348,7 @@ $color:#88002D;
 .item {
     flex-grow: 1;
     width: 50%;
+    
 }
 nav ul li {
     list-style-type: none;
@@ -353,4 +360,28 @@ nav ul li {
     align-items: center;
     padding: 2vh;
     flex-grow: 1;
+}
+.fond{
+    background-image: url(../img/card2.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 55% 0%;
+
+}
+
+#card3 {
+    width: 30%;
+    height: auto;
+    margin: 10px auto;
+    background-color: $color-3;
+    font-family: "SourceSansPro-Regular", sans-serif;
+    text-align:center;
+    padding: 10px;
+    border-radius: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#gallery{
+    margin-top: 13vh;
 }

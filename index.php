@@ -32,7 +32,7 @@ if(isset($_POST['submit-login'])){ // VERIFICATION D'IDENTIFIANTS
 ?>
 
 <section>
-    <article id="cartouche">
+    <article id="cartouche" class="fond">
         <div id="text-welcome">
             <h1 class="ml3">WELCOME TO MYCAVE</h1>
             <p>If you are a member of the staff, please login to myCave:</p>
@@ -48,7 +48,7 @@ if(isset($_POST['submit-login'])){ // VERIFICATION D'IDENTIFIANTS
                     <input type="submit" name="submit-login" class="btn" value="LOGIN">
                 </div>
                 <div>
-                    <a href="winelist.php" class="button3">SEE OUR WINE GALLERY</a>
+                    <a id="gallery" href="winelist.php" class="button3">SEE OUR WINE GALLERY</a>
                 </div>  
             </div>
             </form>

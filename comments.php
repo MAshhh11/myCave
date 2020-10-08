@@ -23,8 +23,10 @@ include 'assets/php/nav.php';
             <h3 class="ml3">What people think of this wine: </h3>
         
             <?php while($row = $sql->fetch()){ ?>
-                <div id="card" class="flex">
-                    <p><?= $row['user_fullname']; ?>: "<?= $row['comment']; ?>" RATE GIVEN: <?= $row['rate']; ?>
+                <div id="card3" class="flex">
+                    
+                    <p><?= $row['user_fullname']; ?>  <i class="far fa-comment"></i> : "<?= $row['comment']; ?>"
+                    RATE GIVEN: <?= $row['rate']; ?>
 
                 <?php                 
                 //AFFICHAGE DES ETOILES SELON LA NOTE

@@ -10,6 +10,7 @@ $breakpoint-lg-desktop: 1200px;
         background-position:50% 0%; 
         background: fixed center no-repeat cover;
     }
+    
     #card{
         width: 80%;
     }
@@ -38,7 +39,13 @@ $breakpoint-lg-desktop: 1200px;
     #card2 {
         height: auto;
     }
-    
+    .fond{
+        background-image: none;
+    }
+    #card2 {
+        background-image: none;
+        background-color: $color-3;
+    }
  }
 
 // Medium devices (tablets, 768px and up)
@@ -72,6 +79,14 @@ $breakpoint-lg-desktop: 1200px;
     }
     #card2 {
         height: 90%;
+    }
+    .fond {
+        background-image: url(../img/card2.png);
+    }
+    #card2 {
+        
+        background-image: url(../img/landscape.jpg);
+        background-position: 50% 30%;    
     }
     
 }

@@ -66,7 +66,7 @@ include 'assets/php/nav.php';
                 <a href="add_wine.php" class="button3">ADD WINE</a>
                 <a href="winelist.php" class="button3">WINE LIST</a>
             </div>
-            <div id="card">
+            <div id="card3">
                 <?php
                 if (isset($_SESSION['id']) && $_SESSION['id'] == 3){ 
                     // SELON SI L'USER EST ADMIN OU PAS AFFICHAGE D'UNE CARTE AVEC DES BOUTONS ?>
