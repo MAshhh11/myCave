@@ -15,7 +15,7 @@ if (isset($_POST['submit-signup'])){
     if($sql = $db->query("SELECT * FROM user WHERE email = '$user_email'")){ // VERIFICATION DE L'EMAIL EXISTANT OU NON
         $compteur = $sql->rowCount();
         if($compteur != 0){
-            $message = "<div class ='danger'> Il y a déja un compte possédant cet e-mail </div>";
+            $message = "<div class ='danger'>This email already exists! </div>";
         }elseif(!empty($user_email) && !empty($user_pass)){
             if($user_pass == $user_pass2){
                 $user_pass = password_hash($user_pass, PASSWORD_DEFAULT);

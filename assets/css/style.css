@@ -244,7 +244,7 @@ textarea::placeholder {
 }
 
 .imgwine {
-  border-radius: 10px;
+  box-shadow: 0 8px 6px -6px grey;
 }
 
 .button3 {
