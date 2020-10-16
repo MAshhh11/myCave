@@ -29,11 +29,12 @@ include 'assets/php/nav.php';
         $sth->bindValue(4, $id);
         // si la requete s'execute on affiche un msg de succès
         if($sth->execute()){
-            echo "<div class ='success'> Votre profil a bien été mis à jour</div>";
+            echo "<div class ='success'> Your profile has been updated!</div>";
+            header('Location: profile.php?id='.$id);
             
 
         }else{
-            echo "<div class ='danger'> Une erreur vient de se produire.</div>";
+            echo "<div class ='danger'> Something went wrong!</div>";
             
         }
     }
@@ -58,7 +59,7 @@ include 'assets/php/nav.php';
                     <input type="text" name="email" placeholder="EMAIL" value="<?= $row['email'];?>">
                 </div>
                 <div>
-                    <input type="submit" name="submit-login" class="btn" value="UPDATE PROFILE">
+                    <input type="submit" name="submit-login" class="button3" value="UPDATE PROFILE">
                 </div>
             </form>
             <div class="button">

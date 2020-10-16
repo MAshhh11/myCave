@@ -45,7 +45,7 @@ if(isset($_POST['submit-login'])){ // VERIFICATION D'IDENTIFIANTS
                     <input type="password" name="user_password" placeholder="PASSWORD">
                 </div>
                 <div>
-                    <input type="submit" name="submit-login" class="btn" value="LOGIN">
+                    <input type="submit" name="submit-login" class="button3" value="LOGIN">
                 </div>
                 <div>
                     <a id="gallery" href="winelist.php" class="button3">SEE OUR WINE GALLERY</a>

@@ -30,9 +30,8 @@ if(isset($_SESSION['id'])){ // ACCES SEULEMENT AUX USERS
                 <p>On a scale of 1 to 5, please rate this wine:<br>
                 (please stay polite or your comment will be deleted):</p>
         <!-- FORMULAIRE -->
-                <form class="center" action="vote_wine_post.php?id=<?= $result['id'] ?>" method="post" enctype="multipart/form-data">
-                <div class="center">
-                
+                <form action="vote_wine_post.php?id=<?= $result['id'] ?>" method="post" enctype="multipart/form-data">
+                <div class="center2">
                     <div>
                         <input type="text" name="fullname" value="<?= $row['firstname']; ?> <?= $row['lastname']; ?>" >
                     </div>
@@ -47,13 +46,15 @@ if(isset($_SESSION['id'])){ // ACCES SEULEMENT AUX USERS
                     </div>
                     <div>
                         <label for="comment">Tell us your story</label>:</label>
-                        <textarea id="comment" name="comment" placeholder="ADD YOUR COMMENT HERE..." rows="4" cols="20"></textarea>
+                        <input id="comment" name="comment" placeholder="YOUR COMMENT..."></input>
                     </div>
-                    <div class="button">
-                        <input type="submit" name="submit-wine" class="btn" value="RATE">
+                    <div class="button margin">
+                        <input type="submit" name="submit-wine" class="button3" value="RATE">
                     </div> 
                 </div>
                 </form>
+
+
                 <div class="button">
                     <a href="displaywine.php?id=<?= $id ?>" class="button3">RETURN</a>
                 </div>

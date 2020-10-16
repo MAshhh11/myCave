@@ -58,7 +58,7 @@ if (isset($_POST['submit-signup'])){
                     <input type="password" name="user_password_2_signup" placeholder="CONFIRM PASSWORD">
                 </div>
                 <div>
-                    <input type="submit" name="submit-signup" class="btn" value="ADD NEW USER">
+                    <input type="submit" name="submit-signup" class="button3" value="ADD NEW USER">
                 </div>
             </form>
             <div class="button">

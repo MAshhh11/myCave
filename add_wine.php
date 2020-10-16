@@ -45,7 +45,7 @@ if(isset($_SESSION['id'])){    // VISIBLE SEULEMENT DES USERS
                     </label>
                 </div> 
                 <div class="button">
-                    <input type="submit" name="submit-wine" class="btn" value="ADD WINE">
+                    <input type="submit" name="submit-wine" class="button3" value="ADD WINE">
                 </div> 
             </form>
             <div class="button">

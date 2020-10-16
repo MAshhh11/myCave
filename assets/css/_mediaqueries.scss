@@ -2,6 +2,7 @@ $breakpoint-smartphones: 300px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
 $breakpoint-lg-desktop: 1200px;
+$breakpoint-xl-desktop: 2000px;
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: $breakpoint-smartphones) { 
@@ -127,6 +128,42 @@ $breakpoint-lg-desktop: 1200px;
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: $breakpoint-lg-desktop) { 
+    body {
+        background-size: 100%; 
+        background-position: 100% 50%; 
+    
+    }
+    #card{
+        width: 30%;
+    }
+    #results{
+        flex-direction: row;
+    }
+    .stars {
+        width: 20%;
+    }
+    .flex2 {
+        flex-direction: row;
+    }
+    section {
+        margin-bottom: 2vh;
+    }
+    .item {
+        width: 50% !important;
+    }
+    .flex3 {
+        display: flex;
+    }
+    .litools {
+        display: inline;
+    }
+    #card2 {
+        height: auto;
+    }
+}
+
+@media (min-width: $breakpoint-xl-desktop){
+
     body {
         background-size: 100%; 
         background-position: 100% 50%; 

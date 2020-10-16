@@ -35,7 +35,7 @@ if (isset($_SESSION['id']) && $_SESSION['id'] == 3){
                 <input type="text" name="email" placeholder="EMAIL" value="<?= $row['email'];?>">
             </div>
             <div>
-                <input type="submit" name="submit-login" class="btn" value="UPDATE PROFILE">
+                <input type="submit" name="submit-login" class="button3" value="UPDATE PROFILE">
             </div>
         </form>
 <?php   
